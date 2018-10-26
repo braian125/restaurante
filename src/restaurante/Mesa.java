@@ -12,12 +12,15 @@ public class Mesa {
     private ArrayList<Mesa> mesas;
     Random rand = new Random();
 
-    public Mesa(int cod, String id) {
+    /**
+     * Sobrecarga de metodo constructor
+     * */
+    public Mesa(int cod, String id) {//constructor
         this.codigo = cod;
         this.idPersona = id;
     }
-    
-    public Mesa(int cant) {
+
+    public Mesa(int cant) { //constructor
         mesas = new ArrayList<Mesa>(cant);
         for(int i = 0; i<cant; i++) {
             mesas.add(new Mesa(i, String.valueOf(rand.nextInt(11282451))));
@@ -27,11 +30,11 @@ public class Mesa {
     public int getCodigo() {
         return this.codigo;
     }
-    
+
     public String getIdPersona() {
         return idPersona;
     }
-    
+
     public ArrayList<Mesa> getMesas() {
         return mesas;
     }
@@ -39,7 +42,7 @@ public class Mesa {
     public void setIdPersona(String idPersona) {
         this.idPersona = idPersona;
     }
-    
+
     public Mesa buscarMesa(int cod) {
         int i = 0;
         Mesa mesa = null;
@@ -51,10 +54,10 @@ public class Mesa {
             }
             i++;
         } while (found == false && mesas.size() > i);
-        
+
         return mesa;
     }
-    
+
     public boolean liberarMesa(int cod) {
         Mesa mesa = buscarMesa(cod);
         System.out.println(mesa);
@@ -62,10 +65,10 @@ public class Mesa {
             mesa.idPersona = "";
             return true;
         }
-        
+
         return false;
     }
-    
+
     public int contarMesasLibres() {
         int contador = 0;
         for(Mesa mesa: mesas) {
@@ -75,7 +78,7 @@ public class Mesa {
         }
         return contador;
     }
-    
+
     public boolean asignarMesa(Reserva reserva) {
         int i = 0;
         boolean found = false;

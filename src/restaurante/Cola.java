@@ -29,6 +29,16 @@ public class Cola extends ArrayList {
         return datoAuxiliar;
     }
 
+    public String mostrarCola() {
+        String mensaje = "";
+        int i = 0;
+        do {
+            mensaje+=i+1+". "+this.get(i)+", personas\n";
+            i++;
+        } while (this.size() > i);
+        return mensaje;
+    }
+
     public boolean vacia() {
         return this.isEmpty();
     }
