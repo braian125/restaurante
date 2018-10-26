@@ -19,9 +19,6 @@ public class Restaurante {
         int cantidadMesas = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese el nro de mesas disponibles:","Mesas",JOptionPane.INFORMATION_MESSAGE));
         Mesa mesa = new Mesa(cantidadMesas);
 
-        /**
-         * Ocupar mesas automaticamente una vez iniciado el programa
-         * */
         do
         {
             opc = Menu();
@@ -37,7 +34,6 @@ public class Restaurante {
                     reservas.encolar(reserva);
                     break;
                 case '2':
-                    //reservas.frente();
                     if(!reservas.vacia()) {
                         if(mesa.contarMesasLibres() > 0){
                             Reserva pCola = (Reserva) reservas.frente();

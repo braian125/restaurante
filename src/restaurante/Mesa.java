@@ -22,6 +22,9 @@ public class Mesa {
 
     public Mesa(int cant) { //constructor
         mesas = new ArrayList<Mesa>(cant);
+        /**
+         * Ocupar mesas automaticamente una vez iniciado el programa
+         * */
         for(int i = 0; i<cant; i++) {
             mesas.add(new Mesa(i, String.valueOf(rand.nextInt(11282451))));
         }
