@@ -6,24 +6,6 @@ import java.util.ArrayList;
  */
 public class Cola extends ArrayList {
 
-    //private ArrayList cola;
-    //private int primero, ultimo, maximo, x;
-    //private ArrayList<Object> objetos = new ArrayList<Object>(10);
-
-    /*public Cola(int cantidad)  //constructor
-    {
-        primero = x = 0;
-        ultimo = -1;
-        maximo = cantidad;
-        cola = new ArrayList<Object>(maximo);
-    }*/
-
-    /*public void Encolar(String dato)
-    {
-        ++ultimo;
-        cola[ultimo] = dato;
-    }*/
-
     public void encolar(Object dato) {
         if(dato != null){
             this.add(dato);
